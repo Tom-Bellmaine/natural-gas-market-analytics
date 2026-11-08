@@ -25,7 +25,7 @@ seasonal = load('eia_gas_storage_seasonality.csv')
 # Prefer the 12-week scenario file with explicit scenario columns.
 def load_storage_scenarios():
     candidates = sorted(DATA.glob('natural_gas_storage_forecast*.csv'))
-    required = {'Date', 'Base_Forecast_Bcf', 'Higher_Storage_Bcf', 'Lower_Storage_Bcf'}
+    required = {'Date', 'Base_Storage_Bcf', 'Higher_Storage_Bcf', 'Lower_Storage_Bcf'}
     for path in candidates:
         df = pd.read_csv(path)
         df.columns = df.columns.astype(str).str.strip()
@@ -54,7 +54,7 @@ a,b,c,d = st.columns(4)
 a.metric('Henry Hub spot', f"${last_price['Henry_Hub_USD_MMBtu']:.2f}/MMBtu", help=f"Observation: {last_price['Date']:%Y-%m-%d}")
 b.metric('US working gas', f"{last_storage['Storage_Bcf']:,.0f} Bcf", help=f"Observation: {last_storage['Date']:%Y-%m-%d}")
 if last_forecast is not None:
-    c.metric('12-week base storage', f"{last_forecast['Base_Forecast_Bcf']:,.1f} Bcf", help=f"Scenario target: {last_forecast['Date']:%Y-%m-%d}")
+    c.metric('12-week base storage', f"{last_forecast['Base_Storage_Bcf']:,.1f} Bcf", help=f"Scenario target: {last_forecast['Date']:%Y-%m-%d}")
 else:
     c.metric('12-week base storage', 'Unavailable', help='No compatible 12-week scenario CSV was found')
 if {'LNG','Demand'}.issubset(uk_latest.index) and uk_latest.loc['Demand','Value']:
