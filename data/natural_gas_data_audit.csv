@@ -1,0 +1,19 @@
+Filename,Status,Rows,Columns,Column_Names,First_Date,Latest_Date,Missing_Values,Forecast_File,Backtest_File
+data_quality_report.csv,Readable,13,10,File | Status | Rows | Columns | First_Date | Latest_Date | Missing_Cells | Duplicate_Rows | Warnings | Column_Names,1997-01-07,2026-11-06,14,False,False
+eia_gas_storage_seasonality.csv,Readable,616,8,Date | Storage_Bcf | ISO_Year | ISO_Week | Five_Year_Avg_Bcf | Surplus_Deficit_Bcf | Deviation_Pct | Reference_Years,2015-01-02,2026-10-30,0,False,False
+eia_natural_gas_storage.csv,Readable,879,7,Date | Storage_Bcf | Weekly_Change_Bcf | Injection_Bcf | Withdrawal_Bcf | Year | Month,2010-01-01,2026-10-30,3,False,False
+eia_us_lng_exports.csv,Readable,200,6,Date | LNG_Exports_Million_Cubic_Feet | LNG_Exports_Bcf | Days_In_Month | LNG_Exports_Bcf_Per_Day | Year,2010-01-15,2026-08-15,0,False,False
+henry_hub_prices.csv,Readable,5722,4,Date | Henry_Hub_USD_MMBtu | MA_30 | Year,1997-01-07,2026-11-03,29,False,False
+natural_gas_combined_market_data.csv,Readable,615,15,Date | Storage_Bcf | Five_Year_Avg_Bcf | Surplus_Deficit_Bcf | Deviation_Pct | Reference_Years | Weekly_Change_Bcf | Henry_Hub_Weekly_Avg | HDD_Weekly | CDD_Weekly | Average_Temperature_C | Net_Withdrawal_Bcf | Price_Change_USD_MMBtu | Price_Change_Pct | Year,2015-01-09,2026-10-30,2,False,False
+natural_gas_forecast_backtest.csv,Readable,141,8,Origin_Date | Target_Date | Horizon_Weeks | Actual_Bcf | Forecast_Bcf | Naive_Forecast_Bcf | Absolute_Error_Bcf | Naive_Absolute_Error_Bcf,2014-12-26,2026-06-12,0,True,True
+natural_gas_market_intelligence.csv,Readable,1172,7,Date | Category | Indicator | Value | Unit | Source | Note,2014-12-26,2026-11-06,138,False,False
+natural_gas_model_comparison.csv,Readable,3,6,Horizon_Weeks | Tests | Weather_MAE_Bcf | Seasonal_MAE_Bcf | Naive_MAE_Bcf | Weather_vs_Seasonal_Improvement_Pct,,,0,False,False
+natural_gas_storage_forecast.csv,Readable,12,11,Date | Week_Ahead | Forecast_Weekly_Change_Bcf | Base_Forecast_Bcf | Higher_Storage_Bcf | Lower_Storage_Bcf | Five_Year_Avg_Bcf | Base_Deviation_Bcf | Forecast_Origin_Date | Starting_Storage_Bcf | Scenario_Adjustment_Bcf_Per_Week,2026-11-06,2027-01-22,0,True,False
+natural_gas_weather_analysis.csv,Readable,617,7,Date | Storage_Bcf | Weekly_Change_Bcf | HDD_Weekly | CDD_Weekly | Average_Temperature_C | Withdrawal_Bcf,2015-01-09,2026-10-30,0,False,False
+natural_gas_weather_backtest.csv,Readable,93,10,Origin_Date | Target_Date | Horizon_Weeks | Actual_Bcf | Weather_Forecast_Bcf | Seasonal_Forecast_Bcf | Naive_Forecast_Bcf | Weather_Absolute_Error_Bcf | Seasonal_Absolute_Error_Bcf | Naive_Absolute_Error_Bcf,2019-01-04,2026-06-26,0,False,True
+natural_gas_weather_forecast.csv,Readable,12,10,Date | Week_Ahead | Forecast_HDD_Weekly | Forecast_CDD_Weekly | Weather_Weekly_Change_Bcf | Seasonal_Weekly_Change_Bcf | Weather_Forecast_Bcf | Seasonal_Forecast_Bcf | Forecast_Origin_Date | Starting_Storage_Bcf,2026-11-06,2027-01-22,0,True,False
+uk_gas_demand_linepack_corrected.csv,Readable,238,7,Date | Value | Publication_ID | Series | Unit | Source | Source_Data_Item,2026-07-11,2026-11-06,0,False,False
+uk_gas_fundamentals.csv,Readable,320,9,Market_Category | Publication_ID | Publication_Name | Applicable_For | Applicable_At | Value | Quality_Indicator | Source | Date,2026-07-11,2026-11-06,320,False,False
+uk_gas_fundamentals_checked.csv,Readable,320,13,Market_Category | Publication_ID | Publication_Name | Applicable_For | Applicable_At | Value | Quality_Indicator | Source | Date | Data_Type | QC_Status | QC_Issues | Extreme_Value_Flag,2026-07-11,2026-11-06,320,False,False
+uk_gas_operational_data.csv,Readable,182,6,Applicable At | Applicable For | Data Item | Value | Generated Time | Quality Indicator,,,182,False,False
+uk_gas_three_series_validated.csv,Readable,357,9,Date | Value | Generated | Publication_ID | Source_Name | Category | Series | Unit | Validation_Status,2026-07-11,2026-11-06,0,False,False
